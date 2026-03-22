@@ -1,0 +1,313 @@
+/* Variables and Setup */
+:root {
+    --text-dark: #111827;
+    --text-gray: #4b5563;
+    --border-color: #000000;
+    --primary-blue: #1a73e8;
+    --bg-white: #ffffff;
+    --font-main: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-dark);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Background image filling the entire screen behind the content */
+.sky-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/sky-bg.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+/* Wrapper to constrain and center the total app width */
+.page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Floating Search Bar Above Container */
+.top-search-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    padding-right: 20px;
+}
+
+.top-search {
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    width: 320px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.top-search .search-icon-top {
+    color: var(--text-gray);
+    margin-right: 12px;
+}
+
+.top-search input {
+    border: none;
+    outline: none;
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    width: 100%;
+    color: var(--text-dark);
+}
+
+.top-search input::placeholder {
+    color: #9ca3af;
+}
+
+/* Main White Application Container */
+.app-container {
+    background-color: var(--bg-white);
+    border: 2px solid var(--border-color);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    /* subtle animation on hover for premium feel */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Main Header Section */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 32px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: var(--primary-blue);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: var(--text-dark);
+    transition: transform 0.2s;
+}
+
+.icon-btn:hover {
+    transform: scale(1.1);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-family: var(--font-main);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+    background: #f3f4f6;
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero-section {
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    min-height: 400px;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: var(--bg-white);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 28px;
+    font-family: var(--font-main);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #1557b0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 115, 232, 0.3);
+}
+
+.hero-image {
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Bottom / Categories Section */
+.bottom-section {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.categories-label-box {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+}
+
+/* Category Cards Grid */
+.categories-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.category-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: var(--bg-white);
+    transition: all 0.2s ease;
+}
+
+.category-card.interactive:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    background: var(--primary-blue);
+    border-color: var(--primary-blue);
+    cursor: pointer;
+}
+
+.category-card.interactive:hover h3,
+.category-card.interactive:hover .icon-box {
+    color: var(--bg-white);
+}
+
+.icon-box {
+    font-size: 1.8rem;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.2s ease;
+}
+
+.math-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+    font-weight: 700;
+    font-family: monospace;
+    font-size: 1.4rem;
+}
+
+.category-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    transition: color 0.2s ease;
+}
+
+.category-card.empty {
+    min-height: 96px; /* Matches the approximate height of filled cards */
+    background: transparent;
+}
+
+

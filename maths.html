@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resourcely - Dashboard</title>
+    <!-- Modern Sans-Serif Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="sky-background"></div>
+    <div class="dashboard-page-wrapper">
+        <div class="dashboard-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-logo">
+                    <span style="font-family: serif; font-weight: bold; font-size: 2rem; letter-spacing: -2px;">M</span>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#"><i class="fa-solid fa-shapes"></i></a>
+                    <a href="#"><i class="fa-regular fa-calendar"></i></a>
+                    <a href="#" class="active"><i class="fa-solid fa-house"></i></a>
+                    <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="#"><i class="fa-solid fa-gear"></i></a>
+                </nav>
+                <div class="sidebar-bottom">
+                    <a href="index.html"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="dashboard-main">
+                <div class="dashboard-grid">
+                    <!-- Column Left -->
+                    <div class="col-left">
+                        <!-- Hero Card -->
+                        <div class="dash-card hero-dashboard">
+                            <div class="hero-dash-content">
+                                <div class="greeting-box">
+                                    <span class="time">Good Evening</span>
+                                    <h2>Arun</h2>
+                                </div>
+                                <h3 class="hero-promo-text">Have You Seen the New<br>Vocabulary<br>Course that has come out yet?</h3>
+                                <button class="btn-dark" style="background:#000; color:#fff; border-radius:20px; padding:10px 24px;">Start Course</button>
+                            </div>
+                            <img src="images/dashboard-hero.png" alt="Student studying" class="hero-dash-img">
+                        </div>
+
+                        <!-- Your Progress -->
+                        <div class="section-title"><h3>Your Progress</h3></div>
+                        <div class="progress-cards">
+                            <div class="dash-card progress-card">
+                                <div class="icon-box math-icon-small">
+                                    <div>− <span style="font-size:0.8em">×</span></div>
+                                    <div>+ =</div>
+                                </div>
+                                <p>Lines and angles</p>
+                                <div class="progress-bar-bg"><div class="progress-fill" style="width: 70%;"></div></div>
+                            </div>
+                            <div class="dash-card progress-card">
+                                <div class="icon-box math-icon-small">
+                                    <div>− <span style="font-size:0.8em">×</span></div>
+                                    <div>+ =</div>
+                                </div>
+                                <p>Ellipse</p>
+                                <div class="progress-bar-bg"><div class="progress-fill" style="width: 40%;"></div></div>
+                            </div>
+                            <div class="dash-card progress-card">
+                                <div class="icon-box math-icon-small">
+                                    <div>− <span style="font-size:0.8em">×</span></div>
+                                    <div>+ =</div>
+                                </div>
+                                <p>Hyperbola</p>
+                                <div class="progress-bar-bg"><div class="progress-fill" style="width: 60%;"></div></div>
+                            </div>
+                        </div>
+
+                        <!-- Top Articles -->
+                        <div class="section-title"><h3>Top Articles For You</h3></div>
+                        <div class="article-cards">
+                            <div class="dash-card article-card">
+                                <img src="images/article-1.png" alt="Article 1">
+                                <p>"Master Vocabulary though Contextual Usage" is a compilation of 50 scintillating stories</p>
+                            </div>
+                            <div class="dash-card article-card">
+                                <img src="images/article-2.png" alt="Article 2">
+                                <p>The phrase "embarking on a journey" functions as a verbal phrase used to describe the act of beginning a significant undertaking or experience.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column Right -->
+                    <div class="col-right">
+                        <!-- Top Nav / Profile aligned here to sit above calendar -->
+                        <div class="dashboard-top-bar" style="display:flex; justify-content:flex-end; margin-bottom: 20px;">
+                            <div class="user-profile">
+                                <button class="icon-btn-circle" style="background: #e5e7eb; border: none; font-size: 1.3rem;"><i class="fa-regular fa-bell"></i></button>
+                                <img src="images/avatar.png" class="avatar" alt="Avatar">
+                            </div>
+                        </div>
+
+                        <!-- Calendar -->
+                        <div class="dash-card calendar-card">
+                            <div class="calendar-header">
+                                <button class="btn-circle-outline"><i class="fa-solid fa-chevron-left"></i></button>
+                                <h3>March 2029</h3>
+                                <button class="btn-circle-outline"><i class="fa-solid fa-chevron-right"></i></button>
+                            </div>
+                            <div class="calendar-days">
+                                <div class="day"><span>Mon</span><strong>23</strong></div>
+                                <div class="day"><span>Tue</span><strong>24</strong></div>
+                                <div class="day"><span>Wed</span><strong>25</strong></div>
+                                <div class="day"><span>Thu</span><strong>26</strong></div>
+                                <div class="day"><span>Fri</span><strong>27</strong></div>
+                                <div class="day"><span>Sat</span><strong>28</strong></div>
+                                <div class="day"><span>Sun</span><strong>29</strong></div>
+                                <div class="day"><span>Mon</span><strong>30</strong></div>
+                            </div>
+                        </div>
+
+                        <!-- Upcoming Courses -->
+                        <div class="section-title"><h3>Upcoming Courses</h3></div>
+                        <div class="dash-card course-card">
+                            <div class="course-header">
+                                <div class="tags">
+                                    <span class="tag tag-blue">Beginner</span>
+                                    <span class="tag tag-gray">Grammar</span>
+                                </div>
+                                <div class="price">$ 50.96</div>
+                            </div>
+                            <h4>English Grammar</h4>
+                            <p>Discover Pinterest's best ideas and inspiration for Maths logo design. Get inspired and try out new things. 952 people searched this. - Last updated 1d.</p>
+                            <div class="course-action">
+                                <button class="btn-purple">Buy Course</button>
+                            </div>
+                        </div>
+                        
+                        <div class="dash-card course-card">
+                            <div class="course-header">
+                                <div class="tags">
+                                    <span class="tag tag-blue">Intermediate</span>
+                                    <span class="tag tag-gray">Vocabulary</span>
+                                </div>
+                                <div class="price">$ 25.96</div>
+                            </div>
+                            <h4>Idioms about Friendship</h4>
+                            <p>Discover Pinterest's best ideas and inspiration for Maths logo design. Get inspired and try out new things. 952 people searched this. - Last updated 1d.</p>
+                            <div class="course-action">
+                                <button class="btn-purple">Buy Course</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
