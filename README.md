@@ -1,4 +1,4 @@
 # supratim
-my first github repository
+Resourcely-A resource study organiser.
 <br>
-learning how to use github
+Khameneist 2.0
